@@ -2,13 +2,16 @@ import os
 from PIL import Image
 import numpy as np
 
+# 调整自 @Yufeng Wang 的代码，使之可以观感上较为正确地完成色调映射
+# FIXME：将需要 dithering 2bit 的 Alpha 改为能正常混合的 Alpha Pass/Weight
+
 INPUT_IMAGE      = "1.png"         # SDR 区域的图片
 INPUT_IMAGE_2    = "2.png"         # HDR 区域的图片
 OUTPUT_PNG       = "output.png"    # 输出的图片
 HDR_BOOST_FACTOR = 2.5             # HDR 区域的提亮程度，建议 2.0~4.0 间，观测图片是否会过曝白切
 SDR_DARKEN_FACTOR = 0.6            # SDR 区域的压暗程度，建议 0.5~0.7 间，观察图片是否与目标显示设备的白点基准接近
 ICC_PROFILE_PATH = "rec2100pq-experimental.icc"
-MAX_SIZE = 240  # wechat sticker size
+MAX_SIZE = 240                     # wechat sticker size
 
 
 def check(path: str):
