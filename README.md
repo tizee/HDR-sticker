@@ -1,6 +1,9 @@
 # HDR sticker
 
-![image](https://github.com/user-attachments/assets/9f36bf27-c341-4db2-b7d1-eea6356917c8)
+本工具可以将 SDR 亮度范围的图片部分区域提升到 HDR 亮度，输出一张可以在微信、飞书等使用的 HDR 表情包图片。
+
+![image](https://github.com/user-attachments/assets/817bf2e5-884d-4f20-96ee-bf1d59e29fa9)
+
 
 需要准备两张 PNG 图片：
 - 图片 1：正常亮度范围的底图
